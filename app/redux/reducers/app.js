@@ -1,0 +1,35 @@
+var ApiInitialized, ApiSending, Immutable, InitialState, Reducers, StorageLoaded, ToolbarSearch, handleActions, obj, ref, setter;
+
+StorageLoaded = require('redux-storage').LOAD;
+
+handleActions = require('redux-actions').handleActions;
+
+Immutable = require('immutable');
+
+ref = require('../types'), ToolbarSearch = ref.ToolbarSearch, ApiInitialized = ref.ApiInitialized, ApiSending = ref.ApiSending;
+
+setter = require('./utils').setter;
+
+Reducers = (
+  obj = {},
+  obj["" + ToolbarSearch.Show] = setter('toolbarSearchShow'),
+  obj["" + ToolbarSearch.Text] = setter('toolbarSearchText'),
+  obj["" + ApiInitialized] = setter('api'),
+  obj["" + StorageLoaded] = setter({
+    storageLoaded: true
+  }),
+  obj["" + ApiSending] = setter('apiSending'),
+  obj
+);
+
+InitialState = Immutable.Map({
+  toolbarSearchShow: false,
+  toolbarSearchText: null,
+  api: null,
+  apiSending: false,
+  storageLoaded: false
+});
+
+module.exports = handleActions(Reducers, InitialState);
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVkdXgvcmVkdWNlcnMvYXBwLmpzIiwic291cmNlcyI6WyJyZWR1eC9yZWR1Y2Vycy9hcHAuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQUE7O0FBQU8sZ0JBQWlCLE9BQUEsQ0FBUSxlQUFSLEVBQXZCOztBQUNBLGdCQUFpQixPQUFBLENBQVEsZUFBUjs7QUFDbEIsU0FBQSxHQUFZLE9BQUEsQ0FBUSxXQUFSOztBQUNaLE1BQThDLE9BQUEsQ0FBUSxVQUFSLENBQTlDLEVBQUMsaUNBQUQsRUFBZ0IsbUNBQWhCLEVBQWdDOztBQUMvQixTQUFVLE9BQUEsQ0FBUSxTQUFSOztBQUdYLFFBQUEsR0FDRTtRQUFBLEVBQUE7TUFBQSxFQUFBLEdBQUcsYUFBYSxDQUFDLFFBQVEsTUFBQSxDQUFPLG1CQUFQLENBQXpCO01BQ0EsRUFBQSxHQUFHLGFBQWEsQ0FBQyxRQUFRLE1BQUEsQ0FBTyxtQkFBUCxDQUR6QjtNQUVBLEVBQUEsR0FBRyxrQkFBa0IsTUFBQSxDQUFPLEtBQVAsQ0FGckI7TUFHQSxFQUFBLEdBQUcsaUJBQWlCLE1BQUEsQ0FBTztJQUFBLGFBQUEsRUFBZSxJQUFmO0dBQVAsQ0FIcEI7TUFJQSxFQUFBLEdBQUcsY0FBYyxNQUFBLENBQU8sWUFBUCxDQUpqQjs7OztBQU9GLFlBQUEsR0FBZSxTQUFTLENBQUMsR0FBVixDQUNiO0VBQUEsaUJBQUEsRUFBbUIsS0FBbkI7RUFDQSxpQkFBQSxFQUFtQixJQURuQjtFQUVBLEdBQUEsRUFBSyxJQUZMO0VBR0EsVUFBQSxFQUFZLEtBSFo7RUFJQSxhQUFBLEVBQWUsS0FKZjtDQURhOztBQVFmLE1BQU0sQ0FBQyxPQUFQLEdBQWlCLGFBQUEsQ0FBYyxRQUFkLEVBQXdCLFlBQXhCIiwic291cmNlc0NvbnRlbnQiOlsie0xPQUQ6IFN0b3JhZ2VMb2FkZWR9ID0gcmVxdWlyZSAncmVkdXgtc3RvcmFnZSdcbntoYW5kbGVBY3Rpb25zfSA9IHJlcXVpcmUgJ3JlZHV4LWFjdGlvbnMnXG5JbW11dGFibGUgPSByZXF1aXJlICdpbW11dGFibGUnXG57VG9vbGJhclNlYXJjaCwgQXBpSW5pdGlhbGl6ZWQsIEFwaVNlbmRpbmd9ID0gcmVxdWlyZSAnLi4vdHlwZXMnXG57c2V0dGVyfSA9IHJlcXVpcmUgJy4vdXRpbHMnXG5cblxuUmVkdWNlcnMgPVxuICBcIiN7VG9vbGJhclNlYXJjaC5TaG93fVwiOiBzZXR0ZXIoJ3Rvb2xiYXJTZWFyY2hTaG93JylcbiAgXCIje1Rvb2xiYXJTZWFyY2guVGV4dH1cIjogc2V0dGVyKCd0b29sYmFyU2VhcmNoVGV4dCcpXG4gIFwiI3tBcGlJbml0aWFsaXplZH1cIjogc2V0dGVyKCdhcGknKVxuICBcIiN7U3RvcmFnZUxvYWRlZH1cIjogc2V0dGVyKHN0b3JhZ2VMb2FkZWQ6IHllcylcbiAgXCIje0FwaVNlbmRpbmd9XCI6IHNldHRlcignYXBpU2VuZGluZycpXG5cblxuSW5pdGlhbFN0YXRlID0gSW1tdXRhYmxlLk1hcFxuICB0b29sYmFyU2VhcmNoU2hvdzogbm9cbiAgdG9vbGJhclNlYXJjaFRleHQ6IG51bGxcbiAgYXBpOiBudWxsXG4gIGFwaVNlbmRpbmc6IG5vXG4gIHN0b3JhZ2VMb2FkZWQ6IG5vXG5cblxubW9kdWxlLmV4cG9ydHMgPSBoYW5kbGVBY3Rpb25zKFJlZHVjZXJzLCBJbml0aWFsU3RhdGUpXG4iXX0=

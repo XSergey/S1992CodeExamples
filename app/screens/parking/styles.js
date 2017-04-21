@@ -1,0 +1,21 @@
+var StyleSheet;
+
+StyleSheet = require('react-native').StyleSheet;
+
+module.exports = StyleSheet.create({
+  screen: {
+    backgroundColor: 'white',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    flex: 1
+  },
+  description: {
+    textAlign: 'justify'
+  },
+  search: {
+    marginTop: 8,
+    height: 48
+  }
+});
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVucy9wYXJraW5nL3N0eWxlcy5qcyIsInNvdXJjZXMiOlsic2NyZWVucy9wYXJraW5nL3N0eWxlcy5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsSUFBQTs7QUFBQyxhQUFjLE9BQUEsQ0FBUSxjQUFSOztBQUdmLE1BQU0sQ0FBQyxPQUFQLEdBQWlCLFVBQVUsQ0FBQyxNQUFYLENBQ2Y7RUFBQSxNQUFBLEVBQ0U7SUFBQSxlQUFBLEVBQWlCLE9BQWpCO0lBQ0EsaUJBQUEsRUFBbUIsRUFEbkI7SUFFQSxlQUFBLEVBQWlCLENBRmpCO0lBR0EsSUFBQSxFQUFNLENBSE47R0FERjtFQU1BLFdBQUEsRUFDRTtJQUFBLFNBQUEsRUFBVyxTQUFYO0dBUEY7RUFTQSxNQUFBLEVBQ0U7SUFBQSxTQUFBLEVBQVcsQ0FBWDtJQUNBLE1BQUEsRUFBUSxFQURSO0dBVkY7Q0FEZSIsInNvdXJjZXNDb250ZW50IjpbIntTdHlsZVNoZWV0fSA9IHJlcXVpcmUgJ3JlYWN0LW5hdGl2ZSdcblxuXG5tb2R1bGUuZXhwb3J0cyA9IFN0eWxlU2hlZXQuY3JlYXRlXG4gIHNjcmVlbjpcbiAgICBiYWNrZ3JvdW5kQ29sb3I6ICd3aGl0ZSdcbiAgICBwYWRkaW5nSG9yaXpvbnRhbDogMTZcbiAgICBwYWRkaW5nVmVydGljYWw6IDhcbiAgICBmbGV4OiAxXG5cbiAgZGVzY3JpcHRpb246XG4gICAgdGV4dEFsaWduOiAnanVzdGlmeSdcblxuICBzZWFyY2g6XG4gICAgbWFyZ2luVG9wOiA4XG4gICAgaGVpZ2h0OiA0OCJdfQ==

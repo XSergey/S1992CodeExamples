@@ -1,0 +1,16 @@
+var ApiReducers, Reducers, combineReducers, merge;
+
+combineReducers = require('redux').combineReducers;
+
+merge = require('lodash.merge');
+
+ApiReducers = require('bawadi-client/app/api/redux/reducers');
+
+Reducers = {
+  app: require('./app'),
+  route: require('./route')
+};
+
+module.exports = combineReducers(merge(ApiReducers, Reducers));
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVkdXgvcmVkdWNlcnMvaW5kZXguanMiLCJzb3VyY2VzIjpbInJlZHV4L3JlZHVjZXJzL2luZGV4LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxJQUFBOztBQUFDLGtCQUFtQixPQUFBLENBQVEsT0FBUjs7QUFDcEIsS0FBQSxHQUFRLE9BQUEsQ0FBUSxjQUFSOztBQUNSLFdBQUEsR0FBYyxPQUFBLENBQVEsc0NBQVI7O0FBR2QsUUFBQSxHQUNFO0VBQUEsR0FBQSxFQUFLLE9BQUEsQ0FBUSxPQUFSLENBQUw7RUFDQSxLQUFBLEVBQU8sT0FBQSxDQUFRLFNBQVIsQ0FEUDs7O0FBSUYsTUFBTSxDQUFDLE9BQVAsR0FBaUIsZUFBQSxDQUFnQixLQUFBLENBQU0sV0FBTixFQUFtQixRQUFuQixDQUFoQiIsInNvdXJjZXNDb250ZW50IjpbIntjb21iaW5lUmVkdWNlcnN9ID0gcmVxdWlyZSAncmVkdXgnXG5tZXJnZSA9IHJlcXVpcmUgJ2xvZGFzaC5tZXJnZSdcbkFwaVJlZHVjZXJzID0gcmVxdWlyZSAnc3JjL2FwaS9yZWR1eC9yZWR1Y2VycydcblxuXG5SZWR1Y2VycyA9XG4gIGFwcDogcmVxdWlyZSAnLi9hcHAnXG4gIHJvdXRlOiByZXF1aXJlICcuL3JvdXRlJ1xuXG5cbm1vZHVsZS5leHBvcnRzID0gY29tYmluZVJlZHVjZXJzKG1lcmdlKEFwaVJlZHVjZXJzLCBSZWR1Y2VycykpXG4iXX0=

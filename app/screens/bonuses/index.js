@@ -1,0 +1,27 @@
+var RouteActions, Screen, bonusPoints, connect, getBonuses, mapStateToProps, ref, showScanReceipt;
+
+connect = require('react-redux').connect;
+
+RouteActions = require('react-native-router-flux').Actions;
+
+Screen = require('./screen');
+
+ref = require('../../libs/bonuses'), getBonuses = ref.getBonuses, bonusPoints = ref.bonusPoints;
+
+showScanReceipt = require('../../libs/show-scan-receipt');
+
+mapStateToProps = function(state) {
+  var bonuses;
+  bonuses = getBonuses(state);
+  return {
+    bonuses: bonuses.toJS(),
+    points: bonusPoints(bonuses),
+    onScanReceipt: showScanReceipt,
+    registered: state.user.auth.get('token') != null,
+    onSignUp: RouteActions.signUp
+  };
+};
+
+module.exports = connect(mapStateToProps)(Screen);
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVucy9ib251c2VzL2luZGV4LmpzIiwic291cmNlcyI6WyJzY3JlZW5zL2JvbnVzZXMvaW5kZXguY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQUE7O0FBQUMsVUFBVyxPQUFBLENBQVEsYUFBUjs7QUFDRixlQUFnQixPQUFBLENBQVEsMEJBQVIsRUFBekI7O0FBQ0QsTUFBQSxHQUFTLE9BQUEsQ0FBUSxVQUFSOztBQUNULE1BQTRCLE9BQUEsQ0FBUSxvQkFBUixDQUE1QixFQUFDLDJCQUFELEVBQWE7O0FBQ2IsZUFBQSxHQUFrQixPQUFBLENBQVEsOEJBQVI7O0FBR2xCLGVBQUEsR0FBa0IsU0FBQyxLQUFEO0FBQ2hCLE1BQUE7RUFBQSxPQUFBLEdBQVUsVUFBQSxDQUFXLEtBQVg7U0FFVjtJQUFBLE9BQUEsRUFBUyxPQUFPLENBQUMsSUFBUixDQUFBLENBQVQ7SUFDQSxNQUFBLEVBQVEsV0FBQSxDQUFZLE9BQVosQ0FEUjtJQUVBLGFBQUEsRUFBZSxlQUZmO0lBR0EsVUFBQSxFQUFZLG9DQUhaO0lBSUEsUUFBQSxFQUFVLFlBQVksQ0FBQyxNQUp2Qjs7QUFIZ0I7O0FBVWxCLE1BQU0sQ0FBQyxPQUFQLEdBQWlCLE9BQUEsQ0FBUSxlQUFSLENBQUEsQ0FBeUIsTUFBekIiLCJzb3VyY2VzQ29udGVudCI6WyJ7Y29ubmVjdH0gPSByZXF1aXJlICdyZWFjdC1yZWR1eCdcbntBY3Rpb25zOiBSb3V0ZUFjdGlvbnN9ID0gcmVxdWlyZSAncmVhY3QtbmF0aXZlLXJvdXRlci1mbHV4J1xuU2NyZWVuID0gcmVxdWlyZSAnLi9zY3JlZW4nXG57Z2V0Qm9udXNlcywgYm9udXNQb2ludHN9ID0gcmVxdWlyZSAnLi4vLi4vbGlicy9ib251c2VzJ1xuc2hvd1NjYW5SZWNlaXB0ID0gcmVxdWlyZSAnLi4vLi4vbGlicy9zaG93LXNjYW4tcmVjZWlwdCdcblxuXG5tYXBTdGF0ZVRvUHJvcHMgPSAoc3RhdGUpIC0+XG4gIGJvbnVzZXMgPSBnZXRCb251c2VzKHN0YXRlKVxuXG4gIGJvbnVzZXM6IGJvbnVzZXMudG9KUygpXG4gIHBvaW50czogYm9udXNQb2ludHMoYm9udXNlcylcbiAgb25TY2FuUmVjZWlwdDogc2hvd1NjYW5SZWNlaXB0XG4gIHJlZ2lzdGVyZWQ6IHN0YXRlLnVzZXIuYXV0aC5nZXQoJ3Rva2VuJyk/XG4gIG9uU2lnblVwOiBSb3V0ZUFjdGlvbnMuc2lnblVwXG5cblxubW9kdWxlLmV4cG9ydHMgPSBjb25uZWN0KG1hcFN0YXRlVG9Qcm9wcykoU2NyZWVuKVxuIl19

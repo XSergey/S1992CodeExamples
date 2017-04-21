@@ -1,0 +1,6 @@
+module.exports = {
+  List: require('./list'),
+  Detail: require('./detail')
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVucy9wcm9tby9pbmRleC5qcyIsInNvdXJjZXMiOlsic2NyZWVucy9wcm9tby9pbmRleC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFDLE9BQVAsR0FDRTtFQUFBLElBQUEsRUFBTSxPQUFBLENBQVEsUUFBUixDQUFOO0VBQ0EsTUFBQSxFQUFRLE9BQUEsQ0FBUSxVQUFSLENBRFIiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9XG4gIExpc3Q6IHJlcXVpcmUgJy4vbGlzdCdcbiAgRGV0YWlsOiByZXF1aXJlICcuL2RldGFpbCdcbiJdfQ==

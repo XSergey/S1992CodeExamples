@@ -1,0 +1,9 @@
+var fork;
+
+fork = require('redux-saga/effects').fork;
+
+module.exports = function*() {
+  return (yield [fork(require('./user/auth/sagas')), fork(require('./service/sagas')), fork(require('./bonuses/sagas'))]);
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBpL3JlZHV4L3NhZ2FzLmpzIiwic291cmNlcyI6WyJhcGkvcmVkdXgvc2FnYXMuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQUE7O0FBQUMsT0FBUSxPQUFBLENBQVEsb0JBQVI7O0FBR1QsTUFBTSxDQUFDLE9BQVAsR0FBaUIsVUFBQTtTQUFHLENBQUEsTUFBTSxDQUN4QixJQUFBLENBQUssT0FBQSxDQUFRLG1CQUFSLENBQUwsQ0FEd0IsRUFFeEIsSUFBQSxDQUFLLE9BQUEsQ0FBUSxpQkFBUixDQUFMLENBRndCLEVBR3hCLElBQUEsQ0FBSyxPQUFBLENBQVEsaUJBQVIsQ0FBTCxDQUh3QixDQUFOO0FBQUgiLCJzb3VyY2VzQ29udGVudCI6WyJ7Zm9ya30gPSByZXF1aXJlICdyZWR1eC1zYWdhL2VmZmVjdHMnXG5cblxubW9kdWxlLmV4cG9ydHMgPSAtPiB5aWVsZCBbXG4gIGZvcmsocmVxdWlyZSAnLi91c2VyL2F1dGgvc2FnYXMnKVxuICBmb3JrKHJlcXVpcmUgJy4vc2VydmljZS9zYWdhcycpXG4gIGZvcmsocmVxdWlyZSAnLi9ib251c2VzL3NhZ2FzJylcbl1cbiJdfQ==

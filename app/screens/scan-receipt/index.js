@@ -1,0 +1,25 @@
+var Screen, bonuses, connect, mapDispatchToProps, mapStateToProps;
+
+connect = require('react-redux').connect;
+
+bonuses = require('bawadi-client/app/redux/actions').bonuses;
+
+Screen = require('./screen');
+
+mapStateToProps = function(state) {
+  return {
+    sending: state.app.get('apiSending')
+  };
+};
+
+mapDispatchToProps = function(dispatch) {
+  return {
+    onSend: function(base64) {
+      return dispatch(bonuses["new"](base64));
+    }
+  };
+};
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Screen);
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVucy9zY2FuLXJlY2VpcHQvaW5kZXguanMiLCJzb3VyY2VzIjpbInNjcmVlbnMvc2Nhbi1yZWNlaXB0L2luZGV4LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxJQUFBOztBQUFDLFVBQVcsT0FBQSxDQUFRLGFBQVI7O0FBQ1gsVUFBVyxPQUFBLENBQVEsaUNBQVI7O0FBQ1osTUFBQSxHQUFTLE9BQUEsQ0FBUSxVQUFSOztBQUdULGVBQUEsR0FBa0IsU0FBQyxLQUFEO1NBQ2hCO0lBQUEsT0FBQSxFQUFTLEtBQUssQ0FBQyxHQUFHLENBQUMsR0FBVixDQUFjLFlBQWQsQ0FBVDs7QUFEZ0I7O0FBSWxCLGtCQUFBLEdBQXFCLFNBQUMsUUFBRDtTQUNuQjtJQUFBLE1BQUEsRUFBUSxTQUFDLE1BQUQ7YUFDTixRQUFBLENBQVMsT0FBTyxFQUFDLEdBQUQsRUFBUCxDQUFZLE1BQVosQ0FBVDtJQURNLENBQVI7O0FBRG1COztBQUtyQixNQUFNLENBQUMsT0FBUCxHQUFpQixPQUFBLENBQVEsZUFBUixFQUF5QixrQkFBekIsQ0FBQSxDQUE2QyxNQUE3QyIsInNvdXJjZXNDb250ZW50IjpbIntjb25uZWN0fSA9IHJlcXVpcmUgJ3JlYWN0LXJlZHV4J1xue2JvbnVzZXN9ID0gcmVxdWlyZSAnc3JjL3JlZHV4L2FjdGlvbnMnXG5TY3JlZW4gPSByZXF1aXJlICcuL3NjcmVlbidcblxuXG5tYXBTdGF0ZVRvUHJvcHMgPSAoc3RhdGUpIC0+XG4gIHNlbmRpbmc6IHN0YXRlLmFwcC5nZXQoJ2FwaVNlbmRpbmcnKVxuXG5cbm1hcERpc3BhdGNoVG9Qcm9wcyA9IChkaXNwYXRjaCkgLT5cbiAgb25TZW5kOiAoYmFzZTY0KSAtPlxuICAgIGRpc3BhdGNoKGJvbnVzZXMubmV3KGJhc2U2NCkpXG5cblxubW9kdWxlLmV4cG9ydHMgPSBjb25uZWN0KG1hcFN0YXRlVG9Qcm9wcywgbWFwRGlzcGF0Y2hUb1Byb3BzKShTY3JlZW4pXG4iXX0=

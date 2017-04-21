@@ -1,0 +1,18 @@
+var Types, makeServiceTypes, merge, serviceTypes, services;
+
+merge = require('lodash.merge');
+
+services = require('../services');
+
+makeServiceTypes = require('./service/types');
+
+Types = {
+  User: require('./user/types'),
+  Bonuses: require('./bonuses/types')
+};
+
+serviceTypes = makeServiceTypes(services);
+
+module.exports = merge(serviceTypes, Types);
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBpL3JlZHV4L3R5cGVzLmpzIiwic291cmNlcyI6WyJhcGkvcmVkdXgvdHlwZXMuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQUE7O0FBQUEsS0FBQSxHQUFRLE9BQUEsQ0FBUSxjQUFSOztBQUNSLFFBQUEsR0FBVyxPQUFBLENBQVEsYUFBUjs7QUFDWCxnQkFBQSxHQUFtQixPQUFBLENBQVEsaUJBQVI7O0FBR25CLEtBQUEsR0FDRTtFQUFBLElBQUEsRUFBTSxPQUFBLENBQVEsY0FBUixDQUFOO0VBQ0EsT0FBQSxFQUFTLE9BQUEsQ0FBUSxpQkFBUixDQURUOzs7QUFJRixZQUFBLEdBQWUsZ0JBQUEsQ0FBaUIsUUFBakI7O0FBRWYsTUFBTSxDQUFDLE9BQVAsR0FBaUIsS0FBQSxDQUFNLFlBQU4sRUFBb0IsS0FBcEIiLCJzb3VyY2VzQ29udGVudCI6WyJtZXJnZSA9IHJlcXVpcmUgJ2xvZGFzaC5tZXJnZSdcbnNlcnZpY2VzID0gcmVxdWlyZSAnLi4vc2VydmljZXMnXG5tYWtlU2VydmljZVR5cGVzID0gcmVxdWlyZSAnLi9zZXJ2aWNlL3R5cGVzJ1xuXG5cblR5cGVzID1cbiAgVXNlcjogcmVxdWlyZSAnLi91c2VyL3R5cGVzJ1xuICBCb251c2VzOiByZXF1aXJlICcuL2JvbnVzZXMvdHlwZXMnXG5cblxuc2VydmljZVR5cGVzID0gbWFrZVNlcnZpY2VUeXBlcyhzZXJ2aWNlcylcblxubW9kdWxlLmV4cG9ydHMgPSBtZXJnZShzZXJ2aWNlVHlwZXMsIFR5cGVzKVxuIl19

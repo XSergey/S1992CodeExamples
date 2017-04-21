@@ -1,0 +1,26 @@
+var StyleSheet, colors;
+
+StyleSheet = require('react-native').StyleSheet;
+
+colors = require('bawadi-client/app/colors');
+
+module.exports = StyleSheet.create({
+  button: {
+    marginVertical: 6,
+    paddingHorizontal: 8,
+    height: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.blue
+  },
+  title: {
+    color: 'white'
+  }
+});
+
+module.exports.extra = {
+  iconSize: 20
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVucy9fY29tbW9uL2ljb24tYnV0dG9uL3N0eWxlLmpzIiwic291cmNlcyI6WyJzY3JlZW5zL19jb21tb24vaWNvbi1idXR0b24vc3R5bGUuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQUE7O0FBQUMsYUFBYyxPQUFBLENBQVEsY0FBUjs7QUFDZixNQUFBLEdBQVMsT0FBQSxDQUFRLDBCQUFSOztBQUdULE1BQU0sQ0FBQyxPQUFQLEdBQWlCLFVBQVUsQ0FBQyxNQUFYLENBQ2Y7RUFBQSxNQUFBLEVBQ0U7SUFBQSxjQUFBLEVBQWdCLENBQWhCO0lBQ0EsaUJBQUEsRUFBbUIsQ0FEbkI7SUFFQSxNQUFBLEVBQVEsRUFGUjtJQUdBLGFBQUEsRUFBZSxLQUhmO0lBSUEsVUFBQSxFQUFZLFFBSlo7SUFLQSxjQUFBLEVBQWdCLFFBTGhCO0lBTUEsZUFBQSxFQUFpQixNQUFNLENBQUMsSUFOeEI7R0FERjtFQVNBLEtBQUEsRUFDRTtJQUFBLEtBQUEsRUFBTyxPQUFQO0dBVkY7Q0FEZTs7QUFjakIsTUFBTSxDQUFDLE9BQU8sQ0FBQyxLQUFmLEdBQ0U7RUFBQSxRQUFBLEVBQVUsRUFBViIsInNvdXJjZXNDb250ZW50IjpbIntTdHlsZVNoZWV0fSA9IHJlcXVpcmUgJ3JlYWN0LW5hdGl2ZSdcbmNvbG9ycyA9IHJlcXVpcmUgJ3NyYy9jb2xvcnMnXG5cblxubW9kdWxlLmV4cG9ydHMgPSBTdHlsZVNoZWV0LmNyZWF0ZVxuICBidXR0b246XG4gICAgbWFyZ2luVmVydGljYWw6IDZcbiAgICBwYWRkaW5nSG9yaXpvbnRhbDogOFxuICAgIGhlaWdodDogMzZcbiAgICBmbGV4RGlyZWN0aW9uOiAncm93J1xuICAgIGFsaWduSXRlbXM6ICdjZW50ZXInXG4gICAganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInXG4gICAgYmFja2dyb3VuZENvbG9yOiBjb2xvcnMuYmx1ZVxuXG4gIHRpdGxlOlxuICAgIGNvbG9yOiAnd2hpdGUnXG5cblxubW9kdWxlLmV4cG9ydHMuZXh0cmEgPVxuICBpY29uU2l6ZTogMjBcbiJdfQ==

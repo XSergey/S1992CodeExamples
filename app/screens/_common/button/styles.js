@@ -1,0 +1,24 @@
+var StyleSheet, colors;
+
+StyleSheet = require('react-native').StyleSheet;
+
+colors = require('bawadi-client/app/colors');
+
+module.exports = StyleSheet.create({
+  button: {
+    paddingHorizontal: 8,
+    height: 36,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.blue
+  },
+  title: {
+    color: 'white'
+  },
+  disabledButton: {
+    opacity: 0.5
+  }
+});
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NyZWVucy9fY29tbW9uL2J1dHRvbi9zdHlsZXMuanMiLCJzb3VyY2VzIjpbInNjcmVlbnMvX2NvbW1vbi9idXR0b24vc3R5bGVzLmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxJQUFBOztBQUFDLGFBQWMsT0FBQSxDQUFRLGNBQVI7O0FBQ2YsTUFBQSxHQUFTLE9BQUEsQ0FBUSwwQkFBUjs7QUFHVCxNQUFNLENBQUMsT0FBUCxHQUFpQixVQUFVLENBQUMsTUFBWCxDQUNmO0VBQUEsTUFBQSxFQUNFO0lBQUEsaUJBQUEsRUFBbUIsQ0FBbkI7SUFDQSxNQUFBLEVBQVEsRUFEUjtJQUVBLGFBQUEsRUFBZSxLQUZmO0lBR0EsY0FBQSxFQUFnQixRQUhoQjtJQUlBLFVBQUEsRUFBWSxRQUpaO0lBS0EsZUFBQSxFQUFpQixNQUFNLENBQUMsSUFMeEI7R0FERjtFQVFBLEtBQUEsRUFDRTtJQUFBLEtBQUEsRUFBTyxPQUFQO0dBVEY7RUFXQSxjQUFBLEVBQ0U7SUFBQSxPQUFBLEVBQVMsR0FBVDtHQVpGO0NBRGUiLCJzb3VyY2VzQ29udGVudCI6WyJ7U3R5bGVTaGVldH0gPSByZXF1aXJlICdyZWFjdC1uYXRpdmUnXG5jb2xvcnMgPSByZXF1aXJlICdzcmMvY29sb3JzJ1xuXG5cbm1vZHVsZS5leHBvcnRzID0gU3R5bGVTaGVldC5jcmVhdGVcbiAgYnV0dG9uOlxuICAgIHBhZGRpbmdIb3Jpem9udGFsOiA4XG4gICAgaGVpZ2h0OiAzNlxuICAgIGZsZXhEaXJlY3Rpb246ICdyb3cnXG4gICAganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInXG4gICAgYWxpZ25JdGVtczogJ2NlbnRlcidcbiAgICBiYWNrZ3JvdW5kQ29sb3I6IGNvbG9ycy5ibHVlXG5cbiAgdGl0bGU6XG4gICAgY29sb3I6ICd3aGl0ZSdcblxuICBkaXNhYmxlZEJ1dHRvbjpcbiAgICBvcGFjaXR5OiAwLjVcbiJdfQ==

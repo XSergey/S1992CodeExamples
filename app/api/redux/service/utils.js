@@ -1,0 +1,35 @@
+var Actions, get, serviceActionByName, serviceActionPath, serviceReduxAction, services;
+
+get = require('lodash.get');
+
+services = require('../../services');
+
+serviceActionPath = require('../utils').serviceActionPath;
+
+Actions = require('bawadi-client/app/redux/actions');
+
+serviceActionByName = function(serviceName, actionName) {
+  var service;
+  service = services.find(function(service) {
+    return service.name === serviceName;
+  });
+  return service.actions.find(function(action) {
+    return action.name === actionName;
+  });
+};
+
+serviceReduxAction = function(serviceName, action) {
+  var path, reduxAction;
+  path = serviceActionPath(serviceName, action);
+  if (!(reduxAction = get(Actions, path))) {
+    throw new Error("Empty redux action; path is '" + path + "'");
+  }
+  return reduxAction;
+};
+
+module.exports = {
+  serviceReduxAction: serviceReduxAction,
+  serviceActionByName: serviceActionByName
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBpL3JlZHV4L3NlcnZpY2UvdXRpbHMuanMiLCJzb3VyY2VzIjpbImFwaS9yZWR1eC9zZXJ2aWNlL3V0aWxzLmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxJQUFBOztBQUFBLEdBQUEsR0FBTSxPQUFBLENBQVEsWUFBUjs7QUFDTixRQUFBLEdBQVcsT0FBQSxDQUFRLGdCQUFSOztBQUNWLG9CQUFxQixPQUFBLENBQVEsVUFBUjs7QUFDdEIsT0FBQSxHQUFVLE9BQUEsQ0FBUSxpQ0FBUjs7QUFHVixtQkFBQSxHQUFzQixTQUFDLFdBQUQsRUFBYyxVQUFkO0FBQ3BCLE1BQUE7RUFBQSxPQUFBLEdBQVUsUUFBUSxDQUFDLElBQVQsQ0FBYyxTQUFDLE9BQUQ7V0FBYSxPQUFPLENBQUMsSUFBUixLQUFnQjtFQUE3QixDQUFkO1NBQ1YsT0FBTyxDQUFDLE9BQU8sQ0FBQyxJQUFoQixDQUFxQixTQUFDLE1BQUQ7V0FBWSxNQUFNLENBQUMsSUFBUCxLQUFlO0VBQTNCLENBQXJCO0FBRm9COztBQUt0QixrQkFBQSxHQUFxQixTQUFDLFdBQUQsRUFBYyxNQUFkO0FBQ25CLE1BQUE7RUFBQSxJQUFBLEdBQU8saUJBQUEsQ0FBa0IsV0FBbEIsRUFBK0IsTUFBL0I7RUFFUCxJQUFHLENBQUksQ0FBQSxXQUFBLEdBQWMsR0FBQSxDQUFJLE9BQUosRUFBYSxJQUFiLENBQWQsQ0FBUDtBQUNFLFVBQU0sSUFBSSxLQUFKLENBQVUsK0JBQUEsR0FBZ0MsSUFBaEMsR0FBcUMsR0FBL0MsRUFEUjs7QUFHQSxTQUFPO0FBTlk7O0FBU3JCLE1BQU0sQ0FBQyxPQUFQLEdBQWlCO0VBQ2Ysb0JBQUEsa0JBRGU7RUFFZixxQkFBQSxtQkFGZSIsInNvdXJjZXNDb250ZW50IjpbImdldCA9IHJlcXVpcmUgJ2xvZGFzaC5nZXQnXG5zZXJ2aWNlcyA9IHJlcXVpcmUgJy4uLy4uL3NlcnZpY2VzJ1xue3NlcnZpY2VBY3Rpb25QYXRofSA9IHJlcXVpcmUgJy4uL3V0aWxzJ1xuQWN0aW9ucyA9IHJlcXVpcmUgJ3NyYy9yZWR1eC9hY3Rpb25zJ1xuXG5cbnNlcnZpY2VBY3Rpb25CeU5hbWUgPSAoc2VydmljZU5hbWUsIGFjdGlvbk5hbWUpIC0+XG4gIHNlcnZpY2UgPSBzZXJ2aWNlcy5maW5kIChzZXJ2aWNlKSAtPiBzZXJ2aWNlLm5hbWUgaXMgc2VydmljZU5hbWVcbiAgc2VydmljZS5hY3Rpb25zLmZpbmQgKGFjdGlvbikgLT4gYWN0aW9uLm5hbWUgaXMgYWN0aW9uTmFtZVxuXG5cbnNlcnZpY2VSZWR1eEFjdGlvbiA9IChzZXJ2aWNlTmFtZSwgYWN0aW9uKSAtPlxuICBwYXRoID0gc2VydmljZUFjdGlvblBhdGgoc2VydmljZU5hbWUsIGFjdGlvbikgIyAncHJvbW8ub2ZmZXJzLnVwZGF0ZWQnXG5cbiAgaWYgbm90IHJlZHV4QWN0aW9uID0gZ2V0KEFjdGlvbnMsIHBhdGgpXG4gICAgdGhyb3cgbmV3IEVycm9yKFwiRW1wdHkgcmVkdXggYWN0aW9uOyBwYXRoIGlzICcje3BhdGh9J1wiKVxuICAgIFxuICByZXR1cm4gcmVkdXhBY3Rpb25cblxuXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgc2VydmljZVJlZHV4QWN0aW9uXG4gIHNlcnZpY2VBY3Rpb25CeU5hbWVcbn1cbiJdfQ==

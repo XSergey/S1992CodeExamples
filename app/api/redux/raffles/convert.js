@@ -1,0 +1,12 @@
+var convertDate;
+
+convertDate = require('../utils').convertDate;
+
+module.exports = function(items) {
+  items = convertDate(items, '_createdAt', 'date');
+  items = convertDate(items, 'from');
+  items = convertDate(items, 'to');
+  return items;
+};
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBpL3JlZHV4L3JhZmZsZXMvY29udmVydC5qcyIsInNvdXJjZXMiOlsiYXBpL3JlZHV4L3JhZmZsZXMvY29udmVydC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsSUFBQTs7QUFBQyxjQUFlLE9BQUEsQ0FBUSxVQUFSOztBQUdoQixNQUFNLENBQUMsT0FBUCxHQUFpQixTQUFDLEtBQUQ7RUFDZixLQUFBLEdBQVEsV0FBQSxDQUFZLEtBQVosRUFBbUIsWUFBbkIsRUFBaUMsTUFBakM7RUFDUixLQUFBLEdBQVEsV0FBQSxDQUFZLEtBQVosRUFBbUIsTUFBbkI7RUFDUixLQUFBLEdBQVEsV0FBQSxDQUFZLEtBQVosRUFBbUIsSUFBbkI7QUFDUixTQUFPO0FBSlEiLCJzb3VyY2VzQ29udGVudCI6WyJ7Y29udmVydERhdGV9ID0gcmVxdWlyZSAnLi4vdXRpbHMnXG5cblxubW9kdWxlLmV4cG9ydHMgPSAoaXRlbXMpIC0+XG4gIGl0ZW1zID0gY29udmVydERhdGUoaXRlbXMsICdfY3JlYXRlZEF0JywgJ2RhdGUnKVxuICBpdGVtcyA9IGNvbnZlcnREYXRlKGl0ZW1zLCAnZnJvbScpXG4gIGl0ZW1zID0gY29udmVydERhdGUoaXRlbXMsICd0bycpXG4gIHJldHVybiBpdGVtc1xuIl19

@@ -1,0 +1,23 @@
+var Immutable, Info, handleActions, initialState, obj, reducers, setInfo;
+
+Immutable = require('immutable');
+
+handleActions = require('redux-actions').handleActions;
+
+Info = require('./types');
+
+setInfo = function(state, action) {
+  return Immutable.fromJS(action.payload);
+};
+
+reducers = (
+  obj = {},
+  obj["" + Info.Updated] = setInfo,
+  obj
+);
+
+initialState = Immutable.Map();
+
+module.exports = handleActions(reducers, initialState);
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBpL3JlZHV4L3VzZXIvaW5mby9yZWR1Y2Vycy5qcyIsInNvdXJjZXMiOlsiYXBpL3JlZHV4L3VzZXIvaW5mby9yZWR1Y2Vycy5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsSUFBQTs7QUFBQSxTQUFBLEdBQVksT0FBQSxDQUFRLFdBQVI7O0FBQ1gsZ0JBQWlCLE9BQUEsQ0FBUSxlQUFSOztBQUNsQixJQUFBLEdBQU8sT0FBQSxDQUFRLFNBQVI7O0FBR1AsT0FBQSxHQUFVLFNBQUMsS0FBRCxFQUFRLE1BQVI7U0FDUixTQUFTLENBQUMsTUFBVixDQUFpQixNQUFNLENBQUMsT0FBeEI7QUFEUTs7QUFJVixRQUFBLEdBQ0U7UUFBQSxFQUFBO01BQUEsRUFBQSxHQUFHLElBQUksQ0FBQyxXQUFXLE9BQW5COzs7O0FBR0YsWUFBQSxHQUFlLFNBQVMsQ0FBQyxHQUFWLENBQUE7O0FBR2YsTUFBTSxDQUFDLE9BQVAsR0FBaUIsYUFBQSxDQUFjLFFBQWQsRUFBd0IsWUFBeEIiLCJzb3VyY2VzQ29udGVudCI6WyJJbW11dGFibGUgPSByZXF1aXJlICdpbW11dGFibGUnXG57aGFuZGxlQWN0aW9uc30gPSByZXF1aXJlICdyZWR1eC1hY3Rpb25zJ1xuSW5mbyA9IHJlcXVpcmUgJy4vdHlwZXMnXG5cblxuc2V0SW5mbyA9IChzdGF0ZSwgYWN0aW9uKSAtPlxuICBJbW11dGFibGUuZnJvbUpTKGFjdGlvbi5wYXlsb2FkKVxuXG5cbnJlZHVjZXJzID1cbiAgXCIje0luZm8uVXBkYXRlZH1cIjogc2V0SW5mb1xuXG5cbmluaXRpYWxTdGF0ZSA9IEltbXV0YWJsZS5NYXAoKVxuXG5cbm1vZHVsZS5leHBvcnRzID0gaGFuZGxlQWN0aW9ucyhyZWR1Y2VycywgaW5pdGlhbFN0YXRlKVxuIl19
